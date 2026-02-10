@@ -58,7 +58,7 @@ label_to_code = {platform_display_map.get(p, p): p for p in platform_list}
 # ----------------------------
 # Streamlit UI
 # ----------------------------
-st.title("🎮 Video Game Sales Prediction")
+st.title("Video Game Sales Prediction")
 
 st.write(
     "Predict whether a video game will achieve **High Sales (≥ 1 million units)** "
@@ -109,6 +109,6 @@ if st.button("Predict High Sales"):
     probability = model.predict_proba(input_df)[0][1]
 
     if prediction == 1:
-        st.success(f" Prediction: HIGH SALES (≥ 1M units)\n\nConfidence: {probability:.2%}")
+        st.success(f"Prediction: HIGH SALES (≥ 1M units)\n\nConfidence: {probability:.2%}")
     else:
-        st.info(f" Prediction: LOW SALES (< 1M units)\n\nConfidence: {probability:.2%}")
+        st.info(f"Prediction: LOW SALES (< 1M units)\n\nConfidence: {probability:.2%}")
